@@ -35,10 +35,10 @@ class SocketHandler
     unsigned short port;
 public:
     SocketHandler();
-    void sendTransformData(float, float, float, float, float, float);
+    virtual void sendTransformData(float, float, float, float, float, float);
 private:
-    void init(IpAddress, unsigned short);
-    void sendPacket(char*, unsigned int);
+    virtual void init(IpAddress, unsigned short);
+    virtual void sendPacket(char*, unsigned int);
 public:
     static SocketHandler* sktHandler;
 };
