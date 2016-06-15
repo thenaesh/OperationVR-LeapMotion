@@ -74,12 +74,5 @@ public class LeapMotionInput
 		return BitConverter.ToSingle(range, 0);
 	}
 
-    static void Main(string[] args)
-    {
-        LeapMotionInput input = new LeapMotionInput();
-        input.Start();
-        Console.WriteLine("ready to work");
-        while (true) input.Update();
-    }
 }
 
