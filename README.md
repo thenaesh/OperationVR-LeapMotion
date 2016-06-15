@@ -18,9 +18,9 @@
 
 ### Run Instructions
     1. Connect the Leap Motion sensor and make sure it's running
-    2. Enter the OperationVR directory and type `./Tracker`. This starts the program to track the input from the Leap Motion sensor. Note that this program opens a socket on port 10000.
+    2. Enter the OperationVR directory and type `./Tracker`. This starts the program to track the input from the Leap Motion sensor. Note that this program opens a socket on port 10000. Keep this program running (or move it into the background using CTRL-Z and `bg`).
     3. Use LeapMotionInput.cs as a regular component on whichever game object in Unity you wish to animate
 
 
 ## Issues
-    * Known only to compile on a OS X (for now)
+Compilation only happens out of the box for macOS. For Linux/Windows, it is necessary to edit the supplied makefile.
