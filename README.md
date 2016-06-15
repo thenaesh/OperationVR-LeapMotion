@@ -6,12 +6,10 @@
 
 ### Prerequisites
     1. [Leap Motion Developer Kit](developer.leapmotion.com)
-    2. [SFML graphics library](www.sfml-dev.org/download.php)
-    3. [Cygwin](www.cygwin.com)
-        * make
-        * gcc
-        * g++
-        * binutils
+    2. [SFML Graphics Library](www.sfml-dev.org/download.php)
+    3. Standard Development Tools
+        * GCC and friends on Linux/macOS
+        * Visual Studio on Windows (Cygwin _may_ work, but it's dangerous territory; we're linking to DLLs compiled with VC++ here)
 
 ### Build Instructions
     1. Enter the OperationVR directory and type `make`. This will compile Tracker.cpp into the executable Tracker
@@ -23,4 +21,7 @@
 
 
 ## Issues
-Compilation only happens out of the box for macOS. For Linux/Windows, it is necessary to edit the supplied makefile.
+Compilation only happens out of the box for macOS. For Linux, it is necessary to edit the supplied makefile and indicate the paths of the LeapMotion libraries for Linux.
+
+For Windows, it is probably better to use the .sln file in the Leap Motion samples for Windows, instead of `make`. Add Tracker.cpp into the project, then add the headers and DLLs for both the Leap Motion and SFML to it.
+
